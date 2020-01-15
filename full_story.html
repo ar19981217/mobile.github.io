@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
+    <link rel="stylesheet" href="css/full_story.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+
+<header id="header-mobile" class="center">
+
+    <nav class="navbar navbar-expand" id="nav">
+        <div class="header-nav-button">
+            <svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg">
+                <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+            </svg>
+        </div>
+
+        <div class="icon">
+            <span class="share">                <svg
+                    class="IconStyled-sc-1o2nlng-0 hKvWSy ButtonStyled__StyledIcon-sc-1n6uym3-5 dnxoxU" fill="white"
+                    width="24" height="24" viewBox="0 0 32 32"><use xlink:href="#share"><svg id="share"><path
+                    d="M14.507 5.019v10.987h2.987V5.019l4.48 4.053 2.027-1.813-8-7.253-8 7.253 2.027 1.813 4.48-4.053h-.001zm10.88 8.213v9.387H6.614v-9.387h-2.56v9.387a2.641 2.641 0 0 0 2.667 2.667h18.667a2.641 2.641 0 0 0 2.667-2.667v-9.387H25.387z"></path></svg></use></svg></span>
+            <span class="favorite">                <svg
+                    class="IconStyled-sc-1o2nlng-0 hKvWSy ButtonStyled__StyledIcon-sc-1n6uym3-5 dnxoxU" fill="white"
+                    width="24" height="24" viewBox="0 0 32 32"><use xlink:href="#favorite"><svg id="favorite"><path
+                    d="M1.847-.006H22.9v2.632H1.847V-.006zm0 7.895H16.32v2.632H1.847V7.889zm0 7.894h7.895v2.632H1.847v-2.632zm27.632 0h-6.58V9.204h-2.631v6.579h-6.58v2.632h6.58v6.579H22.9v-6.579h6.579v-2.632z"></path></svg></use></svg></span>
+        </div>
+    </nav>
+    <div class="show-navbar max-1024" id="mobile-sidebar-nav">
+        <nav class="navbar ">
+            <div class="header-nav-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                    <g fill="#1B1B1B" fill-rule="evenodd">
+                        <path d="M5.05 3.636L16.364 14.95l-1.414 1.414L3.636 5.05z"></path>
+                        <path d="M3.636 14.95L14.95 3.636l1.414 1.414L5.05 16.364z"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="d-flex header-mobile-log-lang">
+                <div class="languages">
+                    <label>
+                        <span class="languages-toggle">
+                            <span class="current-lang">RU</span>
+                        </span>
+
+                        <span class="arrows">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8" viewBox="0 0 10 8">
+                                <path fill="none" fill-rule="evenodd" stroke="#1B1B1B"
+                                      d="M.99.997l3.984 4.027L9.09.997"></path>
+                            </svg>
+                        </span>
+
+                        <select class="languages-list" name="languages-list" tabindex="-1">
+                            <option value="ru" selected="selected">AM</option>
+                            <option value="ru" selected="selected">AM</option>
+                            <option value="ru" selected="selected">AM</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="user-unauthorized pull-right">
+                    <a class="link-default" href="#">
+                        <span class="login">
+                        Войти
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar-nav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="menu-link link-default   active " href="
+
+                                                    #">
+                        <span>Главная</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="menu-link link-default  " href="
+                                                    #">
+                        <span>Поиск</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="menu-link link-default" href="#">
+                        <span>ТВ</span>
+                    </a>
+                </li>
+                <li class="menu-item_devider"></li>
+                <ul class="submenu-list navbar-nav mr-auto">
+                    <li class="submenu-item">
+                        <a class="submenu-link link-default" href="#">
+                            <span>Смотри как слышно</span>
+                        </a>
+                    </li>
+                    <li class="submenu-item">
+
+                        <a class="submenu-link link-default" href="#">
+                            <span>Ввести промокод</span>
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+    <div class="player-block">
+        <div class="player-container">
+            <div class="iframe-block">
+                <iframe  name="contentBlock" id="contentBlock" data="https://www.youtube.com/embed/kPGvlobF8HQ?autoplay=1" width="100%" height="100%" src="https://www.youtube.com/embed/kPGvlobF8HQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="">
+
+            </div>
+        </div>
+    </div>
+
+</header>
+<button class="click">cick</button>
+<script src="node_modules/swiper/js/swiper.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/story.js"></script>
+<script>
+    $('.click').click(function () {
+        var src = $('#contentBlock').attr('data')
+        $('#contentBlock').attr('src', src)
+    })
+</script>
+</body>
+</html>
