@@ -53,4 +53,17 @@ window.addEventListener("scroll", function () {
     lastScrollTop = st;
 }, false);*/
 
+$("#link_top_3 li").click(function () {
+
+    $("#link_top_3 li").removeClass('active');
+    $(this).addClass('active')
+    for (let i = 0; i< $('#top_3 > div').length; i++){
+        if ($(this).attr('data-type') == $('#top_3 > div').eq(i).attr('data-type')) {
+            $('#top_3 > div').removeClass('active');
+            $('#top_3 > div').eq(i).addClass('active');
+        }
+    }
+
+})
+
 

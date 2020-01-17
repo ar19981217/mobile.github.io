@@ -6,39 +6,21 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<script src="node_modules/jquery/dist/jquery.min.js"></script>-->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/swiper/css/swiper.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
-<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 <body>
 
 <header id="header-mobile" class="center">
-
-    <nav class="navbar navbar-expand" id="nav">
-        <div class="header-nav-button">
-            <svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg">
-                <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
-                <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
-                <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
-            </svg>
-        </div>
-        <div class="navbar-nav w-100 justify-content-center">
-            <a href="#"><h3 class="header-logo">lorem</h3></a>
-
-        </div>
-
-        <div class="search-icon-hide collapse navbar-collapse" id="search">
-            <i class="fas fa-search"></i>
-        </div>
-
-    </nav>
     <div class="mobile-search-block max-1024">
         <div class="navbar">
             <div class="search-title navbar-brand ">
@@ -159,6 +141,25 @@
             </ul>
         </div>
     </div>
+    <nav class="navbar navbar-expand" id="nav">
+        <div class="header-nav-button">
+            <svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg">
+                <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+            </svg>
+        </div>
+        <div class="navbar-nav w-100 justify-content-center">
+            <a href="index.html"><h3 class="header-logo">lorem</h3></a>
+
+        </div>
+
+        <div class="search-icon-hide collapse navbar-collapse" id="search">
+            <i class="fas fa-search"></i>
+        </div>
+
+    </nav>
+
 
 </header>
 <main class="center">
@@ -643,16 +644,16 @@
             <h2><a href="#" class="">TOP 3</a></h2>
             <nav class=" catalog-top">
                 <div class="nav-wrapper">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">
-                                Фильмы</a>
+                    <ul class="navbar-nav" id="link_top_3">
+                        <li class="nav-item active" data-type="films">
+                            <span class="nav-link">
+                                Фильмы</span>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Serial</a>
+                        <li class="nav-item" data-type="serials">
+                            <span class="nav-link">Serial</span>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Film</a>
+                        <li class="nav-item" data-type="cartoons">
+                            <span class="nav-link">Film</span>
                         </li>
                     </ul>
                 </div>
@@ -660,8 +661,268 @@
         </header>
 
         <div class="top">
-            <div class="widget-content films">
-                <div class="cards-content">
+            <div class="widget-content films" id="top_3">
+                <div data-type="films" class="cards-content active">
+
+                    <div class="cards-list">
+                        <div class="card cards-top">
+                            <div class="thumb">
+                                <a href="#">
+                                    <div class="video-overlay">
+                                        <div class="svgicon-overlay">
+                                            <svg fill="#ffffff" version="1.1" id="Layer_1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                                 xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
+			l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
+			c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
+			S360.813,263.01,357.771,264.969z"/>
+	</g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+</svg>
+
+                                        </div>
+                                        <div class="foreign-ratings">
+
+                                            <div class="foreign-rating orientation-vertical">
+                                                <span class="key">IMDb</span>
+                                                <span class="value">8.6</span>
+                                            </div>
+
+                                            <div class="foreign-rating orientation-vertical ml">
+                                                <span class="key">КИНОПОИСК</span>
+                                                <span class="value">8.1</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-content video-content">
+                                            <div class="video-info">
+                                                <span class="video-year">2019</span>,
+                                                <span class="video-country">Криминал</span>
+                                            </div>
+
+                                            <h3 class="video-title">
+                                                Джокер
+                                            </h3>
+                                            <span class="payment-label">
+                                                            <span class="bullet"></span>
+                                                            Покупка
+                                                        </span>
+                                        </div>
+                                    </div>
+                                    <img src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div data-type="serials" class="cards-content ">
+                    <div class="cards-list">
+                        <div class="card cards-top">
+                            <div class="thumb">
+                                <a href="#">
+                                    <div class="video-overlay">
+                                        <div class="svgicon-overlay">
+                                            <svg fill="#ffffff" version="1.1" id="Layer_1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                                 xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
+			l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
+			c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
+			S360.813,263.01,357.771,264.969z"/>
+	</g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+</svg>
+
+                                        </div>
+                                        <div class="foreign-ratings">
+
+                                            <div class="foreign-rating orientation-vertical">
+                                                <span class="key">IMDb</span>
+                                                <span class="value">8.6</span>
+                                            </div>
+
+                                            <div class="foreign-rating orientation-vertical ml">
+                                                <span class="key">КИНОПОИСК</span>
+                                                <span class="value">8.1</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-content video-content">
+                                            <div class="video-info">
+                                                <span class="video-year">2019</span>,
+                                                <span class="video-country">Криминал</span>
+                                            </div>
+
+                                            <h3 class="video-title">
+                                                Джокер
+                                            </h3>
+                                            <span class="payment-label">
+                                                            <span class="bullet"></span>
+                                                            Покупка
+                                                        </span>
+                                        </div>
+                                    </div>
+                                    <img src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card cards-top">
+                            <div class="thumb">
+                                <a href="#">
+                                    <div class="video-overlay">
+                                        <div class="svgicon-overlay">
+                                            <svg fill="#ffffff" version="1.1" id="Layer_1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                                 xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
+			l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
+			c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
+			S360.813,263.01,357.771,264.969z"/>
+	</g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+</svg>
+
+                                        </div>
+                                        <div class="foreign-ratings">
+
+                                            <div class="foreign-rating orientation-vertical">
+                                                <span class="key">IMDb</span>
+                                                <span class="value">8.6</span>
+                                            </div>
+
+
+                                            <div class="foreign-rating orientation-vertical ml">
+                                                <span class="key">КИНОПОИСК</span>
+                                                <span class="value">8.1</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-content video-content">
+                                            <div class="video-info">
+                                                <span class="video-year">2019</span>,
+                                                <span class="video-country">Криминал</span>
+                                            </div>
+
+                                            <h3 class="video-title">
+                                                Джокер
+                                            </h3>
+                                            <span class="payment-label">
+                                                            <span class="bullet"></span>
+                                                            Покупка
+                                                        </span>
+                                        </div>
+                                    </div>
+                                    <img src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-type="cartoons" class="cards-content ">
                     <div class="cards-list">
                         <div class="card cards-top">
                             <div class="thumb">
@@ -746,7 +1007,89 @@
                                     <img src="img/asus-wallpapers-3.jpg" alt="">
                                 </a>
                             </div>
+                        </div>
+                        <div class="card cards-top">
+                            <div class="thumb">
+                                <a href="#">
+                                    <div class="video-overlay">
+                                        <div class="svgicon-overlay">
+                                            <svg fill="#ffffff" version="1.1" id="Layer_1"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                                 xml:space="preserve">
+<g>
+	<g>
+		<path d="M256,0C114.833,0,0,114.844,0,256s114.833,256,256,256s256-114.844,256-256S397.167,0,256,0z M357.771,264.969
+			l-149.333,96c-1.75,1.135-3.771,1.698-5.771,1.698c-1.75,0-3.521-0.438-5.104-1.302C194.125,359.49,192,355.906,192,352V160
+			c0-3.906,2.125-7.49,5.563-9.365c3.375-1.854,7.604-1.74,10.875,0.396l149.333,96c3.042,1.958,4.896,5.344,4.896,8.969
+			S360.813,263.01,357.771,264.969z"/>
+	</g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+                                                <g>
+</g>
+</svg>
 
+                                        </div>
+                                        <div class="foreign-ratings">
+
+                                            <div class="foreign-rating orientation-vertical">
+                                                <span class="key">IMDb</span>
+                                                <span class="value">8.6</span>
+                                            </div>
+
+                                            <div class="foreign-rating orientation-vertical ml">
+                                                <span class="key">КИНОПОИСК</span>
+                                                <span class="value">8.1</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="card-content video-content">
+                                            <div class="video-info">
+                                                <span class="video-year">2019</span>,
+                                                <span class="video-country">Криминал</span>
+                                            </div>
+
+                                            <h3 class="video-title">
+                                                Джокер
+                                            </h3>
+                                            <span class="payment-label">
+                                                            <span class="bullet"></span>
+                                                            Покупка
+                                                        </span>
+                                        </div>
+                                    </div>
+                                    <img src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
                         <div class="card cards-top">
                             <div class="thumb">
@@ -831,10 +1174,8 @@
                                     <img src="img/asus-wallpapers-3.jpg" alt="">
                                 </a>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -843,7 +1184,8 @@
 
     <section class="subscription">
         <div class="widget-banner">
-            <img class="lazy_image loaded" data-original="//s1.vcdn.biz/static/f/1397836661/image.jpg" src="//s1.vcdn.biz/static/f/1397836661/image.jpg" data-was-processed="true">
+            <img class="lazy_image loaded" data-original="//s1.vcdn.biz/static/f/1397836661/image.jpg"
+                 src="//s1.vcdn.biz/static/f/1397836661/image.jpg" data-was-processed="true">
         </div>
         <div class="container">
             <h2 class="widget-title ">
@@ -875,8 +1217,10 @@
         <ul class="socials">
 
             <li>
-                <a class="social social-facebook type-circle" href="https://www.facebook.com/Megogo.International" target="_blank" title="Facebook">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <a class="social social-facebook type-circle" href="https://www.facebook.com/Megogo.International"
+                   target="_blank" title="Facebook">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
 	<g>
@@ -919,15 +1263,22 @@
             </li>
 
             <li>
-                <a class="social social-vkontakte type-circle" href="https://vk.com/public117250640" target="_blank" title="Vkontakte">
-                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/></svg>
+                <a class="social social-vkontakte type-circle" href="https://vk.com/public117250640" target="_blank"
+                   title="Vkontakte">
+                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+                    </svg>
                 </a>
             </li>
 
             <li>
-                <a class="social social-odnoklassniki type-circle" href="https://ok.ru/megogonet" target="_blank" title="Odnoklassniki">
-                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                         viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve">
+                <a class="social social-odnoklassniki type-circle" href="https://ok.ru/megogonet" target="_blank"
+                   title="Odnoklassniki">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;"
+                         xml:space="preserve">
 <g>
 	<g>
 		<path d="M256.002,0c-70.592,0-128,57.408-128,128s57.408,128,128,128s128-57.408,128-128S326.594,0,256.002,0z M256.002,192
@@ -978,14 +1329,20 @@
             </li>
 
             <li>
-                <a class="social social-telegram type-circle" href="https://t.me/popcorn_night" target="_blank" title="Telegram">
-                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
+                <a class="social social-telegram type-circle" href="https://t.me/popcorn_night" target="_blank"
+                   title="Telegram">
+                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+                    </svg>
                 </a>
             </li>
 
             <li>
-                <a class="social social-viber type-circle" href="https://viber.com/popcorn_night" target="_blank" title="Viber">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <a class="social social-viber type-circle" href="https://viber.com/popcorn_night" target="_blank"
+                   title="Viber">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 322 322" style="enable-background:new 0 0 322 322;" xml:space="preserve">
 <g id="XMLID_7_">
 	<path id="XMLID_8_" d="M275.445,135.123c0.387-45.398-38.279-87.016-86.192-92.771c-0.953-0.113-1.991-0.285-3.09-0.467
@@ -1054,7 +1411,7 @@
             <div class="container">
                 <div class="footer-block">
                     <p>
-                        © 2020  MEGOGO. Все права защищены &nbsp;·&nbsp; 18+
+                        © 2020 MEGOGO. Все права защищены &nbsp;·&nbsp; 18+
                     </p>
                 </div>
             </div>
@@ -1071,18 +1428,24 @@
         </div>
     </div>
 </footer>
-		<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 <script src="node_modules/swiper/js/swiper.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
 
-
 <script>
     var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
-        // loop: true,
+        loop: true,
         // loopFix:true,
         // spaceBetween: 20,
         loopFillGroupWithBlank: false,
