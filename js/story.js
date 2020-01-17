@@ -13,7 +13,7 @@ $('.poster-play, .play-icon').click(function () {
 
     var iframe = $('.iframe-block iframe');
     var ifAtt = $(iframe).attr('src');
-    $(iframe).attr('src', ifAtt+'=1');
+    $(iframe).attr('src', 'https://www.youtube.com/embed/udHq9Mg14Os?autoplay=1');
     
         var that = $('.poster, .play-icon');
         $(that).css({
