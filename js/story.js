@@ -14,12 +14,12 @@ $('.poster-play, .play-icon').click(function () {
     var iframe = $('.iframe-block iframe');
     var ifAtt = $(iframe).attr('src');
     $(iframe).attr('src', ifAtt+'=1');
-    setTimeout(() => {
+    
         var that = $('.poster, .play-icon');
         $(that).css({
             display:'none'
         });
         $('.videoView-name').addClass('is-nt-before')
-    }, 500)
+ 
 
 });
