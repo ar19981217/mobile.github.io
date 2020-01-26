@@ -13,10 +13,34 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
           integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
+
+<div class="zoom-foto">
+    <div class="icon-close">
+        <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+            <g fill="#ffffff" fill-rule="evenodd">
+                <path d="M5.05 3.636L16.364 14.95l-1.414 1.414L3.636 5.05z"></path>
+                <path d="M3.636 14.95L14.95 3.636l1.414 1.414L5.05 16.364z"></path>
+            </g>
+        </svg>
+    </div>
+    <div class="center img" id="zoomThis">
+        <!-- Swiper -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-container gallery-top">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/asus-wallpapers-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/asus-wallpapers-3.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <header id="header-mobile" class="center">
     <div class="show-navbar max-1024" id="mobile-sidebar-nav">
@@ -148,7 +172,7 @@
                 <div class="player-container">
                     <div class="iframe-block">
                         <iframe name="contentBlock" id="contentBlock" width="100%" height="100%"
-                                src="https://www.youtube.com/embed/udHq9Mg14Os?autoplay=1" frameborder="0"
+                                src="https://www.youtube.com/embed/udHq9Mg14Os?autoplay" frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                     </div>
@@ -226,8 +250,9 @@
         </div>
     </div>
     <div class="videoView-episodes">
-        <div class="container">
-            <section class="widget-films center p">
+
+        <section class="widget-films center ">
+            <div class="container">
                 <header class="widget-header dont-d-flex">
                     <nav class=" catalog-top">
                         <div class="nav-wrapper">
@@ -242,33 +267,72 @@
                         </div>
                     </nav>
                 </header>
-                <div class="widget-content">
-                    <div class="cards-content">
-                        <div class="cards-list pb-1" style="background: #111;">
-                            <div class="video-item active">
-                                <a href="#">
-                                    <div class="card">
-                                        <div class="thumb">
-                                            <span><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></span>
+            </div>
+            <div class="widget-content">
+                <div class="cards-content">
+                    <div class="cards-list pb-1" style="background: #111;">
+                        <div class="video-item active">
+                            <a href="#">
+                                <div class="card">
+                                    <div class="thumb">
+                                        <span><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></span>
 
-                                        </div>
-                                        <div class="video-active">
-                                            <span>Вы смотрите</span>
-                                        </div>
                                     </div>
-                                    <div class="video-title">
-                                        <h3 class="">
-                                            <span>Серия 1. Первая встреча</span>
+                                    <div class="video-active">
+                                        <span>Вы смотрите</span>
+                                    </div>
+                                </div>
+                                <div class="video-title">
+                                    <h3 class="">
+                                        <span>Серия 1. Первая встреча</span>
 
-                                        </h3>
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-item">
+                            <a href="#">
+                                <div class="card">
+                                    <div class="thumb">
+                                        <span><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></span>
+
                                     </div>
-                                </a>
-                            </div>
+                                    <div class="video-active">
+                                        <span>Вы смотрите</span>
+                                    </div>
+                                </div>
+                                <div class="video-title">
+                                    <h3 class="">
+                                        <span>Серия 1. Первая встреча</span>
+
+                                    </h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="video-item">
+                            <a href="#">
+                                <div class="card">
+                                    <div class="thumb">
+                                        <span><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></span>
+
+                                    </div>
+                                    <div class="video-active">
+                                        <span>Вы смотрите</span>
+                                    </div>
+                                </div>
+                                <div class="video-title">
+                                    <h3 class="">
+                                        <span>Серия 1. Первая встреча</span>
+
+                                    </h3>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
     </div>
     <div class="videoView-info">
         <div class="container">
@@ -304,34 +368,56 @@
         </div>
     </div>
     <div class="videoView-gallery">
-        <div class="container">
-            <section class="widget-films center p">
+
+        <section class="widget-films center">
+            <div class="container">
                 <header class="widget-header">
                     <h2>Трейлеры и кадры</h2>
                 </header>
-                <div class="widget-content">
-                    <div class="cards-content">
-                        <div class="cards-list">
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
+            </div>
 
+            <div class="widget-content">
+                <div class="cards-content">
+                    <div class="cards-list gallery-zoom-id">
+                        <!--********** Trailer *******************-->
+                        <div class="trailer">
+                            <div class="thumb">
+                                <span>
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </span>
+                                <button class="item-play">
+                                    <svg id="svgicon-play" viewBox="0 0 32 32">
+                                        <path class="path1" d="M28.863 16l-25.726 16v-32l25.726 16z"></path>
+                                    </svg>                                </button>
+                            </div>
                         </div>
+                        <!--********** Trailer *******************-->
+                        <div class="card">
+                            <div class="thumb">
+                                <span>
+                                    <img width="193px" src="img/,%20Гальштат_7themes-su.jpg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <span>
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                    <span>
+                                        <img width="193px" src="img/,%20Гальштат_7themes-su.jpg" alt="">
+                                    </span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
     <div class="videoView-description">
         <div class="container">
@@ -352,232 +438,248 @@
         </div>
     </div>
     <div class=" videoView-cast">
-        <div class="container">
-            <section class="widget-films center p">
+        <section class="widget-films center">
+            <div class="container">
                 <header class="widget-header">
                     <h2>Lorem</h2>
                 </header>
-                <div class="widget-content">
-                    <div class="cards-content">
-                        <div class="cards-list">
-                            <div class="video-item active">
-                                <a href="#">
-                                    <h3 class="widget-title">
-                                        Режисcер
-                                    </h3>
-                                    <div class="card">
-                                        <div class="thumb">
-                                            <img src="img/,%20Гальштат_7themes-su.jpg" alt="">
-                                        </div>
+            </div>
+
+            <div class="widget-content">
+                <div class="cards-content">
+                    <div class="cards-list">
+                        <div class="video-item active">
+                            <a href="#">
+                                <h3 class="widget-title">
+                                    Режисcер
+                                </h3>
+                                <div class="card">
+                                    <div class="thumb">
+                                        <img src="img/,%20Гальштат_7themes-su.jpg" alt="">
                                     </div>
-                                    <div class="video-title">
-                                        <div class="person-name">
-                                            Майкл Джей Уайт
-                                        </div>
-
+                                </div>
+                                <div class="video-title">
+                                    <div class="person-name">
+                                        Майкл Джей Уайт
                                     </div>
-                                </a>
 
-                            </div><div class="video-item active">
-                                <a href="#">
-                                    <h3 class="widget-title">
+                                </div>
+                            </a>
 
-                                    </h3>
-                                    <div class="card">
-                                        <div class="thumb">
-                                            <img src="img/,%20Гальштат_7themes-su.jpg" alt="">
-                                        </div>
+                        </div>
+                        <div class="video-item active">
+                            <a href="#">
+                                <h3 class="widget-title">
+
+                                </h3>
+                                <div class="card">
+                                    <div class="thumb">
+                                        <img src="img/,%20Гальштат_7themes-su.jpg" alt="">
                                     </div>
-                                    <div class="video-title">
-                                        <div class="person-name">
-                                            Майкл Джей Уайт
-                                        </div>
-
+                                </div>
+                                <div class="video-title">
+                                    <div class="person-name">
+                                        Майкл Джей Уайт
                                     </div>
-                                </a>
 
-                            </div>
+                                </div>
+                            </a>
+
                         </div>
                     </div>
                 </div>
+            </div>
 
-            </section>
-        </div>
+        </section>
     </div>
     <div class="videoView-comments">
-        <div class="container">
-            <section class="widget-films center p">
+        <section class="widget-films center">
+            <div class="container">
                 <header class="widget-header">
                     <h2>Отзывы</h2>
                 </header>
-                <div class="widget-content">
-                </div>
+            </div>
 
-            </section>
-        </div>
+            <div class="widget-content">
+            </div>
+
+        </section>
     </div>
+
     <div class="what-else">
-        <div class="container">
-            <section class="widget-films center p ">
+        <section class="widget-films center ">
+            <div class="container">
                 <header class="widget-header">
                     <h2>Что еще посмотреть</h2>
                 </header>
-                <div class="widget-content">
-                    <div class="cards-content">
-                        <div class="cards-list">
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="thumb">
-                                    <a href="#">
-                                        <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
-                                    </a>
-                                </div>
-                            </div>
+            </div>
 
+            <div class="widget-content">
+                <div class="cards-content">
+                    <div class="cards-list">
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
                         </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img width="193px" src="img/asus-wallpapers-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
-            </section>
-        </div>
+        </section>
     </div>
-    <footer id="footer">
-        <div class="container">
-            <hr>
-        </div>
-        <div class="footer-block-icon footer-social">
-            <ul class="socials">
 
-                <li>
-                    <a class="social social-facebook type-circle" href="https://www.facebook.com/Megogo.International" target="_blank" title="Facebook">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+</main>
+<footer id="footer">
+    <div class="container">
+        <hr>
+    </div>
+    <div class="footer-block-icon footer-social">
+        <ul class="socials">
+
+            <li>
+                <a class="social social-facebook type-circle" href="https://www.facebook.com/Megogo.International"
+                   target="_blank" title="Facebook">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
 	<g>
 		<path d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/>
 	</g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
 </svg>
 
-                    </a>
-                </li>
+                </a>
+            </li>
 
-                <li>
-                    <a class="social social-vkontakte type-circle" href="https://vk.com/public117250640" target="_blank" title="Vkontakte">
-                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/></svg>
-                    </a>
-                </li>
+            <li>
+                <a class="social social-vkontakte type-circle" href="https://vk.com/public117250640" target="_blank"
+                   title="Vkontakte">
+                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"/>
+                    </svg>
+                </a>
+            </li>
 
-                <li>
-                    <a class="social social-odnoklassniki type-circle" href="https://ok.ru/megogonet" target="_blank" title="Odnoklassniki">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;" xml:space="preserve">
+            <li>
+                <a class="social social-odnoklassniki type-circle" href="https://ok.ru/megogonet" target="_blank"
+                   title="Odnoklassniki">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 512.008 512.008" style="enable-background:new 0 0 512.008 512.008;"
+                         xml:space="preserve">
 <g>
 	<g>
 		<path d="M256.002,0c-70.592,0-128,57.408-128,128s57.408,128,128,128s128-57.408,128-128S326.594,0,256.002,0z M256.002,192
 			c-35.296,0-64-28.704-64-64s28.704-64,64-64s64,28.704,64,64S291.298,192,256.002,192z"/>
 	</g>
 </g>
-                            <g>
+                        <g>
 	<g>
 		<path d="M425.73,252.448c-12.512-12.512-32.736-12.512-45.248,0c-68.608,68.608-180.288,68.608-248.928,0
 			c-12.512-12.512-32.736-12.512-45.248,0c-12.512,12.512-12.512,32.736,0,45.28c39.808,39.808,90.272,62.496,142.304,68.416
@@ -586,50 +688,56 @@
 			c52.032-5.92,102.496-28.608,142.304-68.416C438.21,285.216,438.21,264.96,425.73,252.448z"/>
 	</g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
 </svg>
-                    </a>
-                </li>
+                </a>
+            </li>
 
-                <li>
-                    <a class="social social-telegram type-circle" href="https://t.me/popcorn_night" target="_blank" title="Telegram">
-                        <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
-                    </a>
-                </li>
+            <li>
+                <a class="social social-telegram type-circle" href="https://t.me/popcorn_night" target="_blank"
+                   title="Telegram">
+                    <svg id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/>
+                    </svg>
+                </a>
+            </li>
 
-                <li>
-                    <a class="social social-viber type-circle" href="https://viber.com/popcorn_night" target="_blank" title="Viber">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                             viewBox="0 0 322 322" style="enable-background:new 0 0 322 322;" xml:space="preserve">
+            <li>
+                <a class="social social-viber type-circle" href="https://viber.com/popcorn_night" target="_blank"
+                   title="Viber">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 322 322" style="enable-background:new 0 0 322 322;" xml:space="preserve">
 <g id="XMLID_7_">
 	<path id="XMLID_8_" d="M275.445,135.123c0.387-45.398-38.279-87.016-86.192-92.771c-0.953-0.113-1.991-0.285-3.09-0.467
 		c-2.372-0.393-4.825-0.797-7.3-0.797c-9.82,0-12.445,6.898-13.136,11.012c-0.672,4-0.031,7.359,1.902,9.988
@@ -655,66 +763,65 @@
 		c0.492,0,0.995-0.029,1.496-0.09c8.01-0.953,11.893-6.838,11.542-17.49c0.128-11.117-5.69-23.738-15.585-33.791
 		C209.543,88.98,197.574,83.301,186.687,83.564z"/>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
-                            <g>
+                        <g>
 </g>
 </svg>
 
-                    </a>
-                </li>
+                </a>
+            </li>
 
-            </ul>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-copyright">
-                <div class="container">
-                    <div class="footer-block">
-                        <p>
-                            © 2020  MEGOGO. Все права защищены &nbsp;·&nbsp; 18+
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-full-version">
-                <div class="container">
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="footer-block">
                     <p>
-                        <a href="#">
-                            Полная версия сайта
-                        </a>
+                        © 2020 MEGOGO. Все права защищены &nbsp;·&nbsp; 18+
                     </p>
                 </div>
             </div>
         </div>
-    </footer>
-</main>
+
+        <div class="footer-full-version">
+            <div class="container">
+                <p>
+                    <a href="#">
+                        Полная версия сайта
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 <script src="node_modules/swiper/js/swiper.js"></script>
@@ -724,10 +831,28 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="js/story.js"></script>
-<script>
+
+
+
+<!--**********-- ZoomDefault--*****************-->
+<div id="zoomDefault" style="display: none;">
+    <div class="pagin"></div>
+    <div class=" gallery-top">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/asus-wallpapers-3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/asus-wallpapers-3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="img/,%20Гальштат_7themes-su.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!--**********-- ZoomDefault--*****************-->
+
+
+<!--<script>
     $('.click').click(function () {
         var src = $('#contentBlock').attr('data')
         $('#contentBlock').attr('src', src)
@@ -784,11 +909,11 @@
     function onPlayerStateChange(event) {
     }
 
-    /*-------------------------------------------------------------------*/
+    /*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
     /*  Video Carousel. Requires Twitter Bootstrap
-    /*-------------------------------------------------------------------*/
+    /*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/
 
-</script>
+</script>-->
 
 </body>
 </html>

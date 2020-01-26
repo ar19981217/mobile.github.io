@@ -5,6 +5,13 @@ body {
 .card {
   border: none !important; }
 
+.video-item {
+  display: inline-block; }
+  .video-item:last-child {
+    margin-right: 0 !important; }
+  .video-item:last-child .card {
+    margin-right: 0 !important; }
+
 .widget-films {
   margin-top: 20px; }
   .widget-films .widget-header {
@@ -38,38 +45,64 @@ body {
   .widget-films .widget-content {
     overflow: hidden;
     margin-top: 20px; }
-    .widget-films .widget-content .cards-content {
-      margin-left: -15px; }
-      .widget-films .widget-content .cards-content .cards-list {
-        display: -webkit-box;
+    .widget-films .widget-content .cards-content .cards-list {
+      position: relative;
+      height: 100%;
+      overflow-x: scroll;
+      margin-bottom: -25px;
+      padding-right: 15px;
+      padding-left: 15px;
+      padding-bottom: 25px;
+      white-space: nowrap;
+      -webkit-transition: left .4s;
+      -o-transition: left .4s;
+      transition: left .4s;
+      background: #fff; }
+      .widget-films .widget-content .cards-content .cards-list .video-item {
+        display: inline-block; }
+        .widget-films .widget-content .cards-content .cards-list .video-item:last-child .card, .widget-films .widget-content .cards-content .cards-list .video-item .trailer {
+          margin-right: 0; }
+      .widget-films .widget-content .cards-content .cards-list .trailer .thumb button {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        border-radius: 50%;
+        background-color: #23c3b2; }
+        .widget-films .widget-content .cards-content .cards-list .trailer .thumb button svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -5px 0 0 -4px;
+          font-size: 10px;
+          fill: #fff !important;
+          display: inline-block;
+          width: 1em;
+          height: 1em;
+          stroke-width: 0;
+          stroke: currentColor; }
+      .widget-films .widget-content .cards-content .cards-list .card, .widget-films .widget-content .cards-content .cards-list .trailer {
+        cursor: pointer;
+        margin-right: 8px;
+        overflow: hidden;
         position: relative;
-        height: 100%;
-        overflow-x: scroll;
-        margin-bottom: -25px;
-        padding-right: 15px;
-        padding-left: 15px;
-        padding-bottom: 25px;
-        white-space: nowrap;
-        -webkit-transition: left .4s;
-        -o-transition: left .4s;
-        transition: left .4s;
-        background: #fff; }
-        .widget-films .widget-content .cards-content .cards-list .card {
-          margin-right: 10px;
-          overflow: hidden;
-          position: relative; }
-        .widget-films .widget-content .cards-content .cards-list .thumb {
-          overflow: hidden;
-          border-radius: 5px; }
-          .widget-films .widget-content .cards-content .cards-list .thumb img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            border-radius: 5px;
-            height: 100%;
-            -o-object-fit: cover;
-            object-fit: cover; }
+        display: inline-block; }
+        .widget-films .widget-content .cards-content .cards-list .card:last-child, .widget-films .widget-content .cards-content .cards-list .trailer:last-child {
+          margin-right: 0; }
+      .widget-films .widget-content .cards-content .cards-list .thumb {
+        overflow: hidden;
+        border-radius: 5px; }
+        .widget-films .widget-content .cards-content .cards-list .thumb img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          border-radius: 5px;
+          height: 100%;
+          -o-object-fit: cover;
+          object-fit: cover; }
 
 .center {
   margin: 0 auto;
@@ -357,6 +390,51 @@ body {
     z-index: 10;
     cursor: pointer; }
 
+.zoom_show {
+  opacity: 1 !important;
+  visibility: visible !important; }
+
+.zoom-foto {
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+  opacity: 0;
+  visibility: hidden;
+  padding: 40px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  height: 100%;
+  background: #000; }
+  .zoom-foto .icon-close {
+    position: absolute;
+    top: 15px;
+    cursor: pointer;
+    z-index: 99999;
+    right: 15px; }
+    .zoom-foto .icon-close svg {
+      fill: #fff; }
+  .zoom-foto .swiper-pagination {
+    position: absolute;
+    top: 15px;
+    height: 30px;
+    color: #fff; }
+    .zoom-foto .swiper-pagination span {
+      color: #fff; }
+  .zoom-foto .img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+  .zoom-foto .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%; }
+
 #main {
   max-width: 1024px;
   margin: 0 auto; }
@@ -532,24 +610,24 @@ body {
           #main .videoView-episodes .catalog-top .nav-wrapper ul .active span {
             opacity: 1 !important;
             border-bottom: 1px solid #d07637; }
-    #main .videoView-episodes .card {
+    #main .videoView-episodes .card, #main .videoView-episodes .trailer {
       border: none; }
-      #main .videoView-episodes .card .thumb {
+      #main .videoView-episodes .card .thumb, #main .videoView-episodes .trailer .thumb {
         width: 136px;
         height: 85px; }
-      #main .videoView-episodes .card .video-active {
+      #main .videoView-episodes .card .video-active, #main .videoView-episodes .trailer .video-active {
         position: absolute;
         bottom: 10px;
         width: 100%;
         letter-spacing: 1.3px;
         text-align: center; }
-        #main .videoView-episodes .card .video-active span {
+        #main .videoView-episodes .card .video-active span, #main .videoView-episodes .trailer .video-active span {
           color: #fff;
           font-size: 9px;
           text-transform: uppercase; }
     #main .videoView-episodes .video-title {
       margin: 2px 0 0;
-      height: 20px;
+      height: 35px;
       width: 136px; }
       #main .videoView-episodes .video-title h3 {
         overflow: hidden;
